@@ -1,0 +1,11 @@
+bootfile=fd0!9pcdisk.gz
+nobootprompt=tcp
+*nomp=1
+mouseport=ps2intellimouse
+vgasize=1024x768x8
+monitor=xga
+kbmap=/boot/kbmapes
+ether0=type=i82557 
+fs=212.128.4.59
+auth=212.128.4.59
+

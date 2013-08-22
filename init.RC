@@ -1,0 +1,29 @@
+Local bind -bc $home/pc /sys/src/9/pc
+Local bind -bc $home/boot /sys/src/9/boot
+Local bind -bc $home/port /sys/src/9/port
+cp /sys/src/9/pc/main.c $home/pc/main.c
+
+mount /srv/nopermisos /n/nopermisos
+
+cat /dev/kprint
+
+Local a:
+
+cd /sys/src/9/pc && mk 'CONF=pcdisk' 9pcdisk.gz
+strip < 9pcdisk | gzip -9 > 9pcdisk.gz
+cp /sys/src/9/pc/9pcdisk.gz /n/a/9pcdisk.gz
+
+(Alt+Shift+Asterisco+tecla -> simbolitos)
+
+Local bind -a '#R' /dev
+bind -a '#Q' /usr/luisgb/dev
+
+echo ficheroA > $home/tmp/a
+echo ficheroB > $home/tmp/b
+
+echo + dest $home/tmp/a $home/tmp/b > $home/dev/ctl
+
+echo Hola a todos!! > Luis
+cat Luis
+
+/sys/src/9/port/chan.c --> namec
